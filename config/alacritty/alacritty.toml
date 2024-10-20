@@ -1,0 +1,10 @@
+import = ["~/.config/alacritty/rose-pine.toml"]
+
+[window]
+opacity = 0.85
+padding = { x = 10, y = 10 }
+
+[font]
+normal = { family = "ComicShannsMonoNerdFontMono", style = "Regular" }
+size = 22
+

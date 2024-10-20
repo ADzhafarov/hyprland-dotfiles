@@ -1,0 +1,85 @@
+{
+    "height": 40, // Waybar height (to be removed for auto height)
+    "margin-top": 20,
+    "margin-left": 20,
+    "margin-right": 20,
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": [
+	"custom/archlogo",
+        "hyprland/workspaces",
+    ],
+    "modules-center": [
+        "cpu",
+        "memory",
+        "temperature",
+	"disk",
+    ],
+    "modules-right": [
+        "tray",
+        "custom/usd",
+	"custom/kblayout",
+	"hyprland/language",
+        "pulseaudio",
+        "keyboard-state",
+        "clock",
+    ],
+    "hyprland/lanugage": {
+	"format": "{}",
+    },
+    "custom/usd": {
+        "format": "{} ₽",
+        "exec": "bash ~/.config/waybar/exchangeRate.sh",
+        "interval": 3600,
+        "return-type": "json",
+    },
+    "custom/archlogo": {
+        "format": " ",
+        "tooltip": false,
+    }, 
+    "keyboard-state": {
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+	"hwmon-path": "/sys/devices/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}

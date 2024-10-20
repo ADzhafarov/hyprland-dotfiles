@@ -1,0 +1,43 @@
+[global]
+    width = 400
+    offset = 30x30
+    origin = bottom-right
+    monitor = 1
+
+    progress_bar_min_width = 380
+    progress_bar_max_width = 380
+    progress_bar_corner_radius = 10
+
+    padding = 10
+    horizontal_padding = 10
+    frame_width = 5
+    gap_size = 3
+    font = "Monospace 14"
+
+    icon_theme = "rose-pine-icons"
+    enable_recursive_icon_lookup = true
+    corner_radius = 10
+
+    background = "#26233a"
+    foreground = "#e0def4"
+
+[urgency_low]
+    background = "#191724"
+    highlight = "#e0def4"
+    frame_color = "#c4a7e7"
+    default_icon = "dialog-information"
+    format = "<b><span foreground='#e0def4'>%s</span></b>\n%b"
+
+[urgency_normal]
+    background = "#191724"
+    highlight = "#e0def4"
+    frame_color = "#c4a7e7"
+    default_icon = "dialog-warning"
+    format = "<b><span foreground='#e0def4'>%s</span></b>\n%b"
+
+[urgency_critical]
+    background = "#eb6f92"
+    highlight = "#191724"
+    frame_color = "#191724"
+    default_icon = "dialog-error"
+    format = "<b><span foreground='#191724'>%s</span></b>\n%b"
